@@ -52,6 +52,12 @@ class CCIArraysAndStringsTests: XCTestCase {
         //re-reverse it, should get the original
         let reReversedString = CCIArraysAndStrings.reverse(reversedString)
         XCTAssertEqual(originalString, reReversedString)
+        
+        XCTAssertEqual(CCIArraysAndStrings.reverse(""), "")
+        XCTAssertEqual(CCIArraysAndStrings.reverse("a"), "a")
+        XCTAssertEqual(CCIArraysAndStrings.reverse("ab"), "ba")
+        XCTAssertEqual(CCIArraysAndStrings.reverse("abcd"), "dcba")
+        XCTAssertEqual(CCIArraysAndStrings.reverse("racecar"), "racecar")
     }
 
 }

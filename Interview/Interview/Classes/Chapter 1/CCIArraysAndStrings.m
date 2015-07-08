@@ -95,7 +95,7 @@ void reverse (char * buffer) {
     NSLog(@"before: %s", buffer);
     
     //swap characters up until the mid point
-    for (int i=0; i<length/2; i++) {
+    for (int i=0; i<=length/2; i++) {
         char c = buffer[length - i];
         buffer[length - i] = buffer[i];
         buffer[i] = c;
