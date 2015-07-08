@@ -41,5 +41,17 @@ class CCIArraysAndStringsTests: XCTestCase {
         XCTAssertFalse(CCIArraysAndStrings.hasAllUniqueCharactersO1Space("not unique"))
         XCTAssertTrue(CCIArraysAndStrings.hasAllUniqueCharactersO1Space("uniqe"))
     }
+    
+    func test_1_2() {
+        let originalString = "abc"
+        
+        //reverse it
+        let reversedString = CCIArraysAndStrings.reverse(originalString)
+        XCTAssertEqual(reversedString, "cba")
+        
+        //re-reverse it, should get the original
+        let reReversedString = CCIArraysAndStrings.reverse(reversedString)
+        XCTAssertEqual(originalString, reReversedString)
+    }
 
 }

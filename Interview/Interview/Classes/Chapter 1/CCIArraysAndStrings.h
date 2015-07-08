@@ -13,4 +13,7 @@
 + (BOOL) hasAllUniqueCharacters:(NSString*)string;
 + (BOOL) hasAllUniqueCharactersO1Space:(NSString*)string;
 
++ (NSString*) reverse:(NSString*)string;
+void reverse(char * buffer);
+
 @end
