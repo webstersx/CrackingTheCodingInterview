@@ -16,6 +16,8 @@
 		61F1A6801B4D4C7000242D95 /* InterviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A67F1B4D4C7000242D95 /* InterviewTests.m */; };
 		61F1A68B1B4D4C7000242D95 /* InterviewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A68A1B4D4C7000242D95 /* InterviewUITests.m */; };
 		61F1A69A1B4D50CB00242D95 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A6991B4D50CB00242D95 /* TestFile.swift */; };
+		61F1A69D1B4D659500242D95 /* CCIArraysAndStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A69C1B4D659500242D95 /* CCIArraysAndStrings.m */; };
+		61F1A6A01B4D65B500242D95 /* CCIArraysAndStringsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A69F1B4D65B500242D95 /* CCIArraysAndStringsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		61F1A68C1B4D4C7000242D95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61F1A6981B4D50CA00242D95 /* Interview-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Interview-Bridging-Header.h"; sourceTree = "<group>"; };
 		61F1A6991B4D50CB00242D95 /* TestFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
+		61F1A69B1B4D659500242D95 /* CCIArraysAndStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCIArraysAndStrings.h; path = "Classes/Chapter 1/CCIArraysAndStrings.h"; sourceTree = "<group>"; };
+		61F1A69C1B4D659500242D95 /* CCIArraysAndStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCIArraysAndStrings.m; path = "Classes/Chapter 1/CCIArraysAndStrings.m"; sourceTree = "<group>"; };
+		61F1A69E1B4D65B500242D95 /* InterviewTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		61F1A69F1B4D65B500242D95 /* CCIArraysAndStringsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCIArraysAndStringsTests.swift; path = "Classes/Chapter 1/CCIArraysAndStringsTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 		61F1A6641B4D4C7000242D95 /* Interview */ = {
 			isa = PBXGroup;
 			children = (
+				61F1A6A21B4D66F200242D95 /* Classes */,
 				61F1A6681B4D4C7000242D95 /* AppDelegate.h */,
 				61F1A6691B4D4C7000242D95 /* AppDelegate.m */,
 				61F1A66B1B4D4C7000242D95 /* ViewController.h */,
@@ -115,6 +122,7 @@
 				61F1A6761B4D4C7000242D95 /* Info.plist */,
 				61F1A6651B4D4C7000242D95 /* Supporting Files */,
 				61F1A6981B4D50CA00242D95 /* Interview-Bridging-Header.h */,
+				61F1A69E1B4D65B500242D95 /* InterviewTests-Bridging-Header.h */,
 			);
 			path = Interview;
 			sourceTree = "<group>";
@@ -143,6 +151,24 @@
 				61F1A68C1B4D4C7000242D95 /* Info.plist */,
 			);
 			path = InterviewUITests;
+			sourceTree = "<group>";
+		};
+		61F1A6A11B4D66E700242D95 /* Chapter 1: Arrays and Strings */ = {
+			isa = PBXGroup;
+			children = (
+				61F1A69B1B4D659500242D95 /* CCIArraysAndStrings.h */,
+				61F1A69C1B4D659500242D95 /* CCIArraysAndStrings.m */,
+				61F1A69F1B4D65B500242D95 /* CCIArraysAndStringsTests.swift */,
+			);
+			name = "Chapter 1: Arrays and Strings";
+			sourceTree = "<group>";
+		};
+		61F1A6A21B4D66F200242D95 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				61F1A6A11B4D66E700242D95 /* Chapter 1: Arrays and Strings */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61F1A66D1B4D4C7000242D95 /* ViewController.m in Sources */,
+				61F1A69D1B4D659500242D95 /* CCIArraysAndStrings.m in Sources */,
 				61F1A66A1B4D4C7000242D95 /* AppDelegate.m in Sources */,
 				61F1A6671B4D4C7000242D95 /* main.m in Sources */,
 				61F1A69A1B4D50CB00242D95 /* TestFile.swift in Sources */,
@@ -287,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61F1A6A01B4D65B500242D95 /* CCIArraysAndStringsTests.swift in Sources */,
 				61F1A6801B4D4C7000242D95 /* InterviewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,10 +473,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = InterviewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shawnwebster.InterviewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Interview/InterviewTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Interview.app/Interview";
 			};
 			name = Debug;
@@ -457,10 +488,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = InterviewTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shawnwebster.InterviewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Interview/InterviewTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Interview.app/Interview";
 			};
 			name = Release;
