@@ -59,5 +59,29 @@ class CCIArraysAndStringsTests: XCTestCase {
         XCTAssertEqual(CCIArraysAndStrings.reverse("abcd"), "dcba")
         XCTAssertEqual(CCIArraysAndStrings.reverse("racecar"), "racecar")
     }
+    
+    func test_1_3() {
+        XCTAssertTrue(CCIArraysAndStrings.isString("abc", permutationOf: "bca"))
+        XCTAssertFalse(CCIArraysAndStrings.isString("abc", permutationOf: "def"))
+    }
+    
+    func test_1_4() {
+        var inString = NSMutableString(string: "nospaces")
+        CCIArraysAndStrings.encodeSpaces(inString, length:"nospaces".lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        print("inString = \(inString)")
+        XCTAssertEqual(inString, "nospaces")
+        
+        //test one spaces
+        inString = NSMutableString(string: "one space//")
+        CCIArraysAndStrings.encodeSpaces(inString, length:"one space".lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        print("inString = \(inString)")
+        XCTAssertEqual(inString, "one%20space")
+        
+        //test two spaces -> !! this caught an error where I didn't move the ' ' replacement over to accommodate more spaces before this one
+        inString = NSMutableString(string: "two spaces here////")
+        CCIArraysAndStrings.encodeSpaces(inString, length:"two spaces here".lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        print("inString = \(inString)")
+        XCTAssertEqual(inString, "two%20spaces%20here")
+    }
 
 }

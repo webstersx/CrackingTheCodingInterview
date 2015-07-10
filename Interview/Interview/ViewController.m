@@ -10,6 +10,8 @@
 
 #import "Interview-Swift.h"
 
+#import "CCIArraysAndStrings.h"
+
 @interface ViewController ()
 
 @end
@@ -23,6 +25,11 @@
     TestClass *instance = [TestClass new];
     NSLog(@"%@", instance.string);
     NSLog(@"%@", [instance returnSomething]);
+    
+    NSString *originalString = @"two spaces here";
+    NSMutableString *inString = [NSMutableString stringWithFormat:@"%@////", originalString];
+    [CCIArraysAndStrings encodeSpaces:inString length:originalString.length];
+    NSLog(@"%@", inString);
     
 }
 
