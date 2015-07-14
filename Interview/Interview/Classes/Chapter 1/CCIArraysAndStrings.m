@@ -136,6 +136,8 @@ void reverse (char * buffer) {
 //base case & build: not appropriate
 //data structures brainstorm: it's in-place; another array for all characters O(n)
 
+//time: O(n) (walk string twice, worst case replace every character with %20)
+//space: O(n) (array of spaces, worst case all spaces)
 + (void) encodeSpaces:(NSMutableString*)string length:(NSInteger)n {
     /* I could easily just [string stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
        but that's not really in the spirit of the task
@@ -165,7 +167,7 @@ void reverse (char * buffer) {
     //EPF: could do spaces.count > 0, capture index then
     if (spaceIndex != NSNotFound) {
         
-        //EPF: assert length >= given length + (2 * num spaces)
+        //EPF: assert length >= given length + (2 * num spaces); or else we won't have enough room
         
         for (NSInteger i=n-1; i>=0; i--) {
             if (i > spaceIndex) {
@@ -186,6 +188,46 @@ void reverse (char * buffer) {
             } //else i < spaceIndex => something is messed up! <-- EPF: might as well break/return?
         }
     }
+}
+
+/* 1.5 Implement a method to perform basic string compression using the counts of repeated characters. For example, the string aabcccccaaa would become a2blc5a3. If the "compressed" string would not become smaller than the orig- inal string, your method should return the original string.
+ 
+ Note: There are some strings which are indistinguishable from other strings un/compressed formats. E.g. a1b1c1 cannot be compressed and would equal a1b1c1, but when looking at a1b1c1, how do you know that you're looking at an uncompressed string? It's certainly possible that this is merely abc compressed.
+ */
+
++ (NSString*) compress:(NSString*)input {
+    //EPF: if (input.length > 0) { do the rest, if-length check } return input
+    if (!input || input.length == 0) {
+        return input;
+    }
+    
+    NSMutableString *compressed = [NSMutableString string];
+    unichar c = [input characterAtIndex:0];
+    NSUInteger count = 1;
+    
+    for (NSInteger i=1; i<input.length; i++) {
+        unichar d = [input characterAtIndex:i];
+        
+        if (c==d) {
+            if (count == 9) {
+                [compressed appendFormat:@"%c%lu", c, count];
+                count = 0;
+            }
+            count++;
+        } else {
+            [compressed appendFormat:@"%c%lu", c, count];
+            c = d;
+            count = 1;
+        }
+    }
+    
+    [compressed appendFormat:@"%c%lu", c, count];
+    
+    if (compressed.length < input.length) {
+        return compressed.copy;
+    }
+    
+    return input;
 }
 
 

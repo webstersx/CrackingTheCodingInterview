@@ -83,5 +83,26 @@ class CCIArraysAndStringsTests: XCTestCase {
         print("inString = \(inString)")
         XCTAssertEqual(inString, "two%20spaces%20here")
     }
+    
+    func test_1_5() {
+        
+        var s = "aabcccddd"
+        var scompressed = "a2b1c3d3"
+        var sc = CCIArraysAndStrings.compress(s)
+        
+        XCTAssertNotEqual(s, sc, "a string which can be compressed should not return the original string")
+        XCTAssertEqual(scompressed, sc, "a string which can be compressed should return a compressed string")
+        XCTAssertTrue(sc.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) < s.lengthOfBytesUsingEncoding(NSUTF8StringEncoding),
+            "a string which has been compressed should be shorter than the original string")
+        
+        s = "abc"
+        scompressed = "a1b1c1"
+        sc = CCIArraysAndStrings.compress(s)
+        
+        XCTAssertEqual(s,sc)
+        XCTAssertNotEqual(scompressed, sc)
+        XCTAssertTrue(s.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == sc.lengthOfBytesUsingEncoding(NSUTF8StringEncoding),
+            "a string which cannot be compressed should be equal to the length of the original string")
+    }
 
 }

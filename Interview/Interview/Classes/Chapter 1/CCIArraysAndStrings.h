@@ -24,4 +24,7 @@ void reverse(char * buffer);
 //1.4
 + (void) encodeSpaces:(NSMutableString*)string length:(NSInteger)n;
 
+//1.5
++ (NSString*) compress:(NSString*)input;
+
 @end
