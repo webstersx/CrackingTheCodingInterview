@@ -27,4 +27,7 @@ void reverse(char * buffer);
 //1.5
 + (NSString*) compress:(NSString*)input;
 
+//1.6
++ (void) rotate:(int**)matrix n:(int)n;
+
 @end

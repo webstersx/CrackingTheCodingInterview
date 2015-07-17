@@ -31,6 +31,30 @@
     [CCIArraysAndStrings encodeSpaces:inString length:originalString.length];
     NSLog(@"%@", inString);
     
+    int n = 6;
+    int **matrix;
+    
+    //allocate space for the array
+    matrix = malloc(sizeof(int*) * n);
+    for (NSInteger i=0; i<n; i++) {
+        matrix[i] = malloc(sizeof(int) * n);
+    }
+    
+    //put stuff into the array
+    for (NSInteger i=0; i<n*n; i++) {
+        matrix[i/n][i%n] = (int)i+1;
+    }
+    
+    for (int i=0; i<4; i++) {
+        [CCIArraysAndStrings rotate:(int**)matrix n:n];
+    }
+    
+    //free up the space
+    for (NSInteger i=0; i<n; i++) {
+        free(matrix[i]);
+    }
+    free(matrix);
+    
 }
 
 - (void)didReceiveMemoryWarning {
