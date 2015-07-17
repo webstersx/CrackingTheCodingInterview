@@ -304,6 +304,8 @@ void reverse (char * buffer) {
     NSLog(@"before:");
     [self logMatrix:matrix n:n];
     
+    int m = n-1; //0 indexed width
+    
     //basically we only need to cover a sub-matrix of ceil(half the height)
     for (int row = 0; row < (n+1)/2; row++) {
         
@@ -317,16 +319,16 @@ void reverse (char * buffer) {
             int temp = matrix[row][col];
             
             //place 9 at 12
-            matrix[row][col] = matrix[n-1-col][row];
+            matrix[row][col] = matrix[m-col][row];
             
             //place 6 at 9
-            matrix[n-1-col][row] = matrix[n-1-row][n-1-col];
+            matrix[m-col][row] = matrix[m-row][m-col];
             
             //place 3 at 6
-            matrix[n-1-row][n-1-col] = matrix[col][n-1-row];
+            matrix[m-row][m-col] = matrix[col][m-row];
             
             //place temp (was at 12) at 3
-            matrix[col][n-1-row] = temp;
+            matrix[col][m-row] = temp;
         }
     }
     

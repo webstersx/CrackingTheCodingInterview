@@ -31,7 +31,7 @@
     [CCIArraysAndStrings encodeSpaces:inString length:originalString.length];
     NSLog(@"%@", inString);
     
-    int n = 6;
+    int n = 10;
     int **matrix;
     
     //allocate space for the array
