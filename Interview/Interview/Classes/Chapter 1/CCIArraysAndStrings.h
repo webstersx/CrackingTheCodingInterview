@@ -30,4 +30,7 @@ void reverse(char * buffer);
 //1.6
 + (void) rotate:(int**)matrix n:(int)n;
 
+//1.7
++ (NSArray*) zeroedMatrix:(NSArray*)matrix;
+
 @end

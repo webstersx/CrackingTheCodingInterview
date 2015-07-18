@@ -347,5 +347,58 @@ void reverse (char * buffer) {
     NSLog(@"%@", m);
 }
 
++ (NSArray*) zeroedMatrix:(NSArray*)matrix {
+    
+    NSUInteger n = matrix.count;
+    NSUInteger m = ((NSArray*)matrix.firstObject).count;
+    
+    NSMutableSet *zeroRows = [NSMutableSet set];
+    NSMutableSet *zeroCols = [NSMutableSet set];
+    
+    //EPF: why not enumerate
+    
+    //find all the elements that have an integer value of 0
+    for (NSUInteger i=0; i<n; i++) {
+        NSArray *row = matrix[i];
+        
+        for (NSUInteger j=0; j<m; j++) {
+            NSNumber *number = row[j];
+            
+            if (number.integerValue == 0) {
+                [zeroRows addObject:@(i)];
+                [zeroCols addObject:@(j)];
+            }
+        }
+    }
+    
+    //create a mutable version of our array
+    NSMutableArray *mutMatrix = [matrix mutableCopy];
+    
+    //deeply mutable; convert all of our objects into mutable objects
+    [mutMatrix enumerateObjectsUsingBlock:^(NSArray *row, NSUInteger idx, BOOL * __nonnull stop) {
+        mutMatrix[idx] = row.mutableCopy;
+    }];
+    
+    //make all the zero rows elements zero
+    for (NSNumber *zRow in zeroRows) {
+        //get the row
+        NSMutableArray *row = mutMatrix[zRow.integerValue];
+        //set all its elements to zero
+        [row enumerateObjectsUsingBlock:^(NSNumber *number, NSUInteger idx, BOOL * __nonnull stop) {
+            row[idx] = @0;
+        }];
+    }
+    
+    //make all the zero cols elements zero
+    for (NSNumber *zCol in zeroCols) {
+        //iterate over the rows, setting the same element in each row to 0
+        [mutMatrix enumerateObjectsUsingBlock:^(NSMutableArray *row, NSUInteger idx, BOOL * __nonnull stop) {
+            row[zCol.integerValue] = @0;
+        }];
+    }
+    
+    return mutMatrix.copy;
+}
+
 
 @end

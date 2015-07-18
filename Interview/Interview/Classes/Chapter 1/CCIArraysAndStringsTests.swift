@@ -104,5 +104,40 @@ class CCIArraysAndStringsTests: XCTestCase {
         XCTAssertTrue(s.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == sc.lengthOfBytesUsingEncoding(NSUTF8StringEncoding),
             "a string which cannot be compressed should be equal to the length of the original string")
     }
+    
+//TODO: learn how to test 1.6
+    
+    func test_1_7() {
+
+        //simple cases
+        XCTAssertEqual(CCIArraysAndStrings.zeroedMatrix([[]]) as! [Array<Int>], [[]],"an empty matrix should return an empty matrix")
+        XCTAssertEqual(CCIArraysAndStrings.zeroedMatrix([[0]]) as! [Array<Int>], [[0]], "a fully zeroed matrix should return itself")
+        XCTAssertEqual(CCIArraysAndStrings.zeroedMatrix([[1]]) as! [Array<Int>], [[1]], "a matrix with no zeroes should return itsel")
+        XCTAssertEqual(CCIArraysAndStrings.zeroedMatrix([[0,1]]) as! [Array<Int>], [[0, 0]], "a zeroed row should zero the entire row")
+        XCTAssertEqual(CCIArraysAndStrings.zeroedMatrix([[0],[1]]) as! [Array<Int>], [[0], [0]], "a zeroed column should zero the entire column")
+        
+
+        
+        //a complex case
+        let sourceMatrix : [Array<Int>] = [
+            [0, 1, 1, 1],
+            [1, 1, 0, 1],
+            [1, 1, 0, 1],
+            [1, 1, 1, 1]];
+        
+        let expectedMatrix : [Array<Int>] = [
+            [0, 0, 0, 0],
+            [0, 0, 0, 0],
+            [0, 0, 0, 0],
+            [0, 1, 0, 1]]
+        
+        XCTAssertEqual(CCIArraysAndStrings.zeroedMatrix(
+            sourceMatrix) as! [Array<Int>],
+            expectedMatrix,
+            "a matrix where elements do not contain a zero in their row or column should be left in tact after zeroing the matrix"
+        );
+
+        
+    }
 
 }
