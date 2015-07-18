@@ -33,4 +33,7 @@ void reverse(char * buffer);
 //1.7
 + (NSArray*) zeroedMatrix:(NSArray*)matrix;
 
+//1.8
++ (BOOL) rotatableString:(NSString*)string hasSubstring:(NSString*)substring;
+
 @end

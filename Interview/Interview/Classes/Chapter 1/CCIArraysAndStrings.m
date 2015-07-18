@@ -420,5 +420,62 @@ void reverse (char * buffer) {
  Assume you have a method isSubstring which checks if one word is a substring of another. Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring (e.g.,"waterbottle"is a rota- tion of "erbottlewat").
  */
 
+//pattern matching: like is equal or regular substring + rotation
+//simplify and generalize => start with the case where theres no substring
+//equality / issubstring => find first element of s2 in s1, and compare characters
+//if we can get through to the end, its a substring
+
+//rotation, add % s1.length;
+
+//optimisation => only need to walk s1.length - s2.length for substring, can we benefit from this in rotation?
+//first thought is no? but perhaps there's some runner technique that could be used, will explore later
+
+//O(n*m) time (substring: aaaaaaaaaaaaaaaaaaab in string: aaaaaaaaaaaaaaaaaaaaaa will make 22 * 20 array accesses before finally failing)
+//O(1) space
+
++ (BOOL) rotatableString:(NSString*)string hasSubstring:(NSString*)substring {
+    BOOL isSubstring = NO;
+    
+    //if it can't possibly be a substring don't check
+    if ( ! (substring.length > string.length || substring.length == 0) ) {
+        
+        //get the first character of the substring that we're trying to match
+        unichar sc = [substring characterAtIndex:0];
+        
+        //for the length of the string, try to find the first subcharacter
+        for (NSInteger i=0; i<string.length; i++) {
+            
+            //get this character in string for comparison
+            unichar c = [string characterAtIndex:i];
+            
+            //if they're the same
+            if (c == sc) {
+                
+                //temporarily consider us to be a substring
+                isSubstring = YES;
+                
+                //iterate over the rest of the characters in the substring and compare it against future elements in the original string including wrapping
+                for (NSInteger j=1; j<substring.length; j++) {
+                    //if the two are not the same, this can't be a substring
+                    if ([substring characterAtIndex:j] != [string characterAtIndex:(i+j)%string.length]) {
+                        isSubstring = NO;
+                        //stop checking the rest of the substring, we already failed
+                        break;
+                    }
+                }
+                
+                //if we've been through the entire substring and we haven't set isSubstring to false, then it's a substring so stop iterating over the original
+                if (isSubstring) {
+                    break;
+                }
+            }
+        }
+    }
+    
+    return isSubstring;
+}
+
+
+
 
 @end

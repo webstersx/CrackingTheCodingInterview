@@ -139,5 +139,28 @@ class CCIArraysAndStringsTests: XCTestCase {
 
         
     }
+    
+    func test_1_8() {
+        var string = "short string"
+        XCTAssertTrue(CCIArraysAndStrings.rotatableString(string, hasSubstring: string), "a string should be a substring of itself")
+        
+        var substring = ""
+        XCTAssertFalse(CCIArraysAndStrings.rotatableString(string, hasSubstring: substring), "an empty string is not a substring of any string")
+        
+        substring = "longer string"
+        XCTAssertFalse(CCIArraysAndStrings.rotatableString(string, hasSubstring: substring), "a substring cannot be longer than the string its trying to be found in")
+        
+        string = "erbottlewat"
+        substring = "bottle"
+        XCTAssertTrue(CCIArraysAndStrings.rotatableString(string, hasSubstring: substring), "a string should find its substring when no rotation is required")
+        
+        substring = "water"
+        XCTAssertTrue(CCIArraysAndStrings.rotatableString(string, hasSubstring: substring), "a string should find its substring when rotation is required")
+        
+        substring = "fire"
+        XCTAssertFalse(CCIArraysAndStrings.rotatableString(string, hasSubstring: substring), "a string should not find a substring if it isn't one")
+        
+        
+    }
 
 }
