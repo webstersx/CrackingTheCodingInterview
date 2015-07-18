@@ -11,7 +11,9 @@
 @implementation CCIArraysAndStrings
 
 
-/* 1.1 a) Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
+/*! 1.1 a) Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
+ */
+/*
  O(n) space, n = number of characters
  O(n) time
  */
@@ -36,8 +38,8 @@
     return YES;
 }
 
-/* 1.1 b) What if you weren't allowed to use additional data structures?
- 
+/*! 1.1 b) What if you weren't allowed to use additional data structures? */
+/*
  O(1) space
  O(n^2) time
  */
@@ -58,7 +60,7 @@
     return YES;
 }
 
-/* 1.2 Implement a function void reverse(char* str) in C or C++ which reverses a null- terminated string.
+/*! 1.2 Implement a function void reverse(char* str) in C or C++ which reverses a null- terminated string.
  */
 
 //because I find it really hard to work with char *'s in Swift, I decided to create a helper test function
@@ -74,7 +76,7 @@
     return [NSString stringWithUTF8String:buffer];
 }
 
-// O(n) time, O(1)? space -- i.e. no extra space used in the actual reversing
+// O(n) time, O(1) space -- i.e. extra space used in the actual reversing is constant
 void reverse (char * buffer) {
     
     //examplify: \n = \n, a\n = a\n, ab\n = ba\n, abc\n = cba\n
@@ -106,11 +108,22 @@ void reverse (char * buffer) {
     
 }
 
-/* 1.3 Given two strings, write a method to decide if one is a permutation of the other.
+/*! 1.3 Given two strings, write a method to decide if one is a permutation of the other.
  */
+//O(n) time,
+//O(n) space, where n is the number of characters; converting to a permutationSet x 2, comparing permutationSet
 + (BOOL) isString:(NSString*)string1 permutationOf:(NSString*)string2 {
+    
+    //shortcut, if they're not the same length they can't be permutations
+    if (string1.length != string2.length) {
+        return NO;
+    }
+    
+    //convert each word to a counted set of the number of characters (effectively, hash it)
     NSCountedSet *set1 = [self permutationSet:string1];
     NSCountedSet *set2 = [self permutationSet:string2];
+    
+    //effectively, compare the hash values: do they have the same number of each type of character
     return [set1 isEqualToSet:set2];
 }
 
@@ -125,7 +138,7 @@ void reverse (char * buffer) {
     return set;
 }
 
-/* 1.4 Write a method to replace all spaces in a string with'%20'. You may assume that the string has sufficient space at the end of the string to hold the additional characters, and that you are given the "true" length of the string. (Note: if imple- menting in Java, please use a character array so that you can perform this opera- tion in place.)
+/*! 1.4 Write a method to replace all spaces in a string with'%20'. You may assume that the string has sufficient space at the end of the string to hold the additional characters, and that you are given the "true" length of the string. (Note: if imple- menting in Java, please use a character array so that you can perform this opera- tion in place.)
  EXAMPLE
  Input: "Mr John Smith Output: "Mr%20Dohn%20Smith"
  */
@@ -190,7 +203,8 @@ void reverse (char * buffer) {
     }
 }
 
-/* 1.5 Implement a method to perform basic string compression using the counts of repeated characters. For example, the string aabcccccaaa would become a2blc5a3. If the "compressed" string would not become smaller than the orig- inal string, your method should return the original string.
+/*! 1.5 Implement a method to perform basic string compression using the counts of repeated characters. For example, the string aabcccccaaa would become a2blc5a3. If the "compressed" string would not become smaller than the orig- inal string, your method should return the original string. */
+/*
  
  Note: There are some strings which are indistinguishable from other strings un/compressed formats. E.g. a1b1c1 cannot be compressed and would equal a1b1c1, but when looking at a1b1c1, how do you know that you're looking at an uncompressed string? It's certainly possible that this is merely abc compressed.
  */
@@ -230,7 +244,9 @@ void reverse (char * buffer) {
     return input;
 }
 
-/* 1.6 Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees. Can you do this in place?
+/*! 1.6 Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes, write a method to rotate the image by 90 degrees. Can you do this in place?
+ */
+/*
  
     1 => 1
  
@@ -399,6 +415,10 @@ void reverse (char * buffer) {
     
     return mutMatrix.copy;
 }
+
+/*! 1.8
+ Assume you have a method isSubstring which checks if one word is a substring of another. Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring (e.g.,"waterbottle"is a rota- tion of "erbottlewat").
+ */
 
 
 @end
