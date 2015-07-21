@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		611C2DD81B5E6C82000E9B19 /* CCILinkedLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 611C2DD71B5E6C82000E9B19 /* CCILinkedLists.m */; };
+		611C2DDB1B5E6CC4000E9B19 /* CCILinkedListsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611C2DD91B5E6C95000E9B19 /* CCILinkedListsTests.swift */; };
+		611C2DDE1B5E6FD2000E9B19 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 611C2DDD1B5E6FD2000E9B19 /* LinkedList.m */; };
+		611C2DE21B5E6FE9000E9B19 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 611C2DE11B5E6FE9000E9B19 /* Node.m */; };
 		61F1A6671B4D4C7000242D95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A6661B4D4C7000242D95 /* main.m */; };
 		61F1A66A1B4D4C7000242D95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A6691B4D4C7000242D95 /* AppDelegate.m */; };
 		61F1A66D1B4D4C7000242D95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A66C1B4D4C7000242D95 /* ViewController.m */; };
@@ -38,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		611C2DD61B5E6C82000E9B19 /* CCILinkedLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCILinkedLists.h; path = "Classes/Chapter 2/CCILinkedLists.h"; sourceTree = "<group>"; };
+		611C2DD71B5E6C82000E9B19 /* CCILinkedLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCILinkedLists.m; path = "Classes/Chapter 2/CCILinkedLists.m"; sourceTree = "<group>"; };
+		611C2DD91B5E6C95000E9B19 /* CCILinkedListsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCILinkedListsTests.swift; path = "Classes/Chapter 2/CCILinkedListsTests.swift"; sourceTree = "<group>"; };
+		611C2DDC1B5E6FD2000E9B19 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinkedList.h; path = "Classes/Chapter 2/LinkedList.h"; sourceTree = "<group>"; };
+		611C2DDD1B5E6FD2000E9B19 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedList.m; path = "Classes/Chapter 2/LinkedList.m"; sourceTree = "<group>"; };
+		611C2DE01B5E6FE9000E9B19 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Node.h; path = "Classes/Chapter 2/Node.h"; sourceTree = "<group>"; };
+		611C2DE11B5E6FE9000E9B19 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Node.m; path = "Classes/Chapter 2/Node.m"; sourceTree = "<group>"; };
 		61F1A6621B4D4C7000242D95 /* Interview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F1A6661B4D4C7000242D95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		61F1A6681B4D4C7000242D95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,6 +98,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		611C2DD51B5E6C5F000E9B19 /* Chapter 2: Linked Lists */ = {
+			isa = PBXGroup;
+			children = (
+				611C2DD61B5E6C82000E9B19 /* CCILinkedLists.h */,
+				611C2DD71B5E6C82000E9B19 /* CCILinkedLists.m */,
+				611C2DD91B5E6C95000E9B19 /* CCILinkedListsTests.swift */,
+				611C2DDF1B5E6FDA000E9B19 /* Data Structures */,
+			);
+			name = "Chapter 2: Linked Lists";
+			sourceTree = "<group>";
+		};
+		611C2DDF1B5E6FDA000E9B19 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				611C2DDC1B5E6FD2000E9B19 /* LinkedList.h */,
+				611C2DDD1B5E6FD2000E9B19 /* LinkedList.m */,
+				611C2DE01B5E6FE9000E9B19 /* Node.h */,
+				611C2DE11B5E6FE9000E9B19 /* Node.m */,
+			);
+			name = "Data Structures";
+			sourceTree = "<group>";
+		};
 		61F1A6591B4D4C7000242D95 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				61F1A6A11B4D66E700242D95 /* Chapter 1: Arrays and Strings */,
+				611C2DD51B5E6C5F000E9B19 /* Chapter 2: Linked Lists */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -303,10 +337,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				61F1A66D1B4D4C7000242D95 /* ViewController.m in Sources */,
+				611C2DDE1B5E6FD2000E9B19 /* LinkedList.m in Sources */,
 				61F1A69D1B4D659500242D95 /* CCIArraysAndStrings.m in Sources */,
 				61F1A66A1B4D4C7000242D95 /* AppDelegate.m in Sources */,
 				61F1A6671B4D4C7000242D95 /* main.m in Sources */,
+				611C2DD81B5E6C82000E9B19 /* CCILinkedLists.m in Sources */,
 				61F1A69A1B4D50CB00242D95 /* TestFile.swift in Sources */,
+				611C2DE21B5E6FE9000E9B19 /* Node.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +353,7 @@
 			files = (
 				61F1A6A01B4D65B500242D95 /* CCIArraysAndStringsTests.swift in Sources */,
 				61F1A6801B4D4C7000242D95 /* InterviewTests.m in Sources */,
+				611C2DDB1B5E6CC4000E9B19 /* CCILinkedListsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

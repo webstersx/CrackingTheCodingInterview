@@ -9,7 +9,7 @@
 import XCTest
 
 class CCIArraysAndStringsTests: XCTestCase {
-
+/*
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -31,6 +31,7 @@ class CCIArraysAndStringsTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+*/
     
     func test_1_1a() {
         XCTAssertFalse(CCIArraysAndStrings.hasAllUniqueCharacters("not unique"))
