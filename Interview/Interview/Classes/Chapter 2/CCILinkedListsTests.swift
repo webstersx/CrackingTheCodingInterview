@@ -80,11 +80,11 @@ class CCILinkedListsTests: XCTestCase {
         l.append(e)
         
         //remove the head, it shouldn't be in the list
-        l.remove(l.head)
+        l.removeNode(l.head)
         XCTAssertNotEqual(a, l.head.data as! String)
         
         //remove the tail, it shouldn't be in the list
-        l.remove(l.tail)
+        l.removeNode(l.tail)
         XCTAssertNotEqual(e, l.tail.data as! String)
         
         //remove the middle node
@@ -92,23 +92,21 @@ class CCILinkedListsTests: XCTestCase {
         XCTAssertNotEqual(l.head, middleNode)
         XCTAssertNotEqual(l.tail, middleNode)
         XCTAssertEqual(middleNode.next, l.tail)
-        l.remove(middleNode)
+        l.removeNode(middleNode)
         XCTAssertEqual(l.head.next, l.tail)
     }
     
     
-//    func test_2_1() {
-//        let list = LinkedList()
-//        
-//        for i in 1...10 {
-//            list.append(Int(i%5))
-//        }
-//        
-//        print(list)
-//        
-//        ll.removeDupes(list)
-//        
-//        print(list)
-//    }
-//    
+    func test_2_1() {
+        let list = LinkedList()
+        
+        for i in 1...10 {
+            list.append(Int(i%5))
+        }
+
+        XCTAssertEqual(list.length, 10)
+        ll.removeDupes(list)
+        XCTAssertEqual(list.length, 5)
+    }
+    
 }

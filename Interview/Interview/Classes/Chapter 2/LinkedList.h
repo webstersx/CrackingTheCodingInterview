@@ -14,6 +14,7 @@
 
 @property (readonly, nonatomic) Node *head;
 @property (readonly, nonatomic) Node *tail;
+@property (readonly, nonatomic) NSUInteger length;
 
 - (void) prepend:(id)data;
 - (void) append:(id)data;
@@ -21,6 +22,9 @@
 
 //- (void) prependNode:(Node*)node;
 //- (void) appendNode:(Node*)node;
+/*! Removes the given node - O(n) */
 - (void) removeNode:(Node*)node;
+/*! Removes the given node providing the prev node for more efficient removal (O(1)) */
+- (void) removeNode:(Node *)node previousNode:(Node *)prev;
 
 @end

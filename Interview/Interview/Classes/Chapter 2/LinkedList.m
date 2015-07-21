@@ -13,10 +13,19 @@
 
 @property (strong, nonatomic) Node *head;
 @property (weak, nonatomic) Node *tail;
+@property (readwrite, nonatomic) NSUInteger length;
 
 @end
 
 @implementation LinkedList
+
+- (id) init {
+    if (self = [super init]) {
+        self.length = 0;
+    }
+    
+    return self;
+}
 
 
 - (void) prepend:(id)data {
@@ -34,6 +43,8 @@
     if (self.head.next) {
         self.tail = n;
     }
+    
+    self.length++;
 }
 
 - (void) append:(id)data {
@@ -49,6 +60,8 @@
     if (!self.head) {
         self.head = n;
     }
+    
+    self.length++;
 }
 
 - (void) removeNode:(Node*)node {
@@ -82,6 +95,25 @@
             
             n = n.next;
         }
+    }
+    
+    self.length--;
+}
+
+- (void) removeNode:(Node *)node previousNode:(Node *)prev {
+    //if this node is head, we already have O(1) removal, leverage the other function
+    if (node == self.head) {
+        [self removeNode:node];
+    } else {
+        //this should only be called if prev is actually directly adjacent to and points to node
+        NSParameterAssert(prev.next == node);
+        prev.next = node.next;
+        
+        if (prev.next == nil) {
+            self.tail = prev;
+        }
+        
+        self.length --;
     }
 }
 

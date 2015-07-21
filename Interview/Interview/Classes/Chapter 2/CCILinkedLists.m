@@ -35,16 +35,12 @@
         //object not found, add it to the set
         if (![set containsObject:n.data]) {
             [set addObject:n.data];
+            prev = n;            
         } else {
-            //dupe, skip past this node
-            prev.next = n.next;
-            
-            //memory management: clean everything up so it'll get ARC-released
-            n.data = nil;
-            n.next = nil;
+            [list removeNode:n previousNode:prev];
         }
         
-        prev = n;
+
         n = n.next;
     }
     
