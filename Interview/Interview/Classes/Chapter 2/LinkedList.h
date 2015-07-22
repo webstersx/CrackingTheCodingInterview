@@ -13,15 +13,19 @@
 @interface LinkedList : NSObject
 
 @property (readonly, nonatomic) Node *head;
-@property (readonly, nonatomic) Node *tail;
+@property (weak, readonly, nonatomic) Node *tail;
 @property (readonly, nonatomic) NSUInteger length;
 
+//adding data
 - (void) prepend:(id)data;
 - (void) append:(id)data;
-//- (void) remove:(id)data;
 
+//adding nodes
 //- (void) prependNode:(Node*)node;
 //- (void) appendNode:(Node*)node;
+
+//removing data/nodes
+//- (void) remove:(id)data; //O(n), remove all nodes with this data
 /*! Removes the given node - O(n) */
 - (void) removeNode:(Node*)node;
 /*! Removes the given node providing the prev node for more efficient removal (O(1)) */

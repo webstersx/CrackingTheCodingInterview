@@ -12,7 +12,7 @@
 @interface LinkedList()
 
 @property (strong, nonatomic) Node *head;
-@property (weak, nonatomic) Node *tail;
+@property (weak, readwrite, nonatomic) Node *tail;
 @property (readwrite, nonatomic) NSUInteger length;
 
 @end
