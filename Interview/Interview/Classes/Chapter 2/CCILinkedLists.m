@@ -43,7 +43,33 @@
 
         n = n.next;
     }
+}
+
+/*! 2.2 Implement an algorithm to find the kth to last element of a singly linked list. */
+- (Node*) kthLastElement:(NSUInteger)k inList:(LinkedList*)list {
     
+    //create a runner as the head of the list
+    Node *runner = list.head;
+    
+    //walk the runner k elements
+    while (runner && k>0) {
+        runner = runner.next;
+        k--;
+    }
+    
+    //if we went too far, this will be nil, otherwise we're about to make it head
+    Node *kthLastNode = runner;
+    
+    //if we didn't go past the end
+    if (runner) {
+        kthLastNode = list.head;
+        while (runner.next) {
+            kthLastNode = kthLastNode.next;
+            runner = runner.next;
+        }
+    }
+    
+    return kthLastNode;
 }
 
 @end

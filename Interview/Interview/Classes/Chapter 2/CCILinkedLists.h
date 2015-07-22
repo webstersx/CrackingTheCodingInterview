@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @class LinkedList;
+@class Node;
 
 @interface CCILinkedLists : NSObject
 
 - (void) removeDupes:(LinkedList*)list;
+- (Node*) kthLastElement:(NSUInteger)k inList:(LinkedList*)list;
 
 @end
 

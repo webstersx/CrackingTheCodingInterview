@@ -109,4 +109,28 @@ class CCILinkedListsTests: XCTestCase {
         XCTAssertEqual(list.length, 5)
     }
     
+    func test_2_2() {
+        let list = LinkedList()
+        list.append(3)
+        list.append(2)
+        list.append(1)
+        list.append(0)
+        
+        //off the end
+        let k4 = ll.kthLastElement(4, inList:list)
+        XCTAssertNil(k4, "a list with fewer elements than k should return nil")
+        
+        //kth last is head
+        let k3 = ll.kthLastElement(3, inList:list)
+        XCTAssertEqual(k3.data as! Int, list.head.data as! Int, "the kth last element in a list of size k should be its head")
+
+        let k1 = ll.kthLastElement(1, inList:list)
+        XCTAssertEqual(k1.next, list.tail, "the next to last element should point to the tail")
+        
+        let k0 = ll.kthLastElement(0, inList:list)
+        XCTAssertEqual(k0.data as! Int, list.tail.data as! Int, "the 0th to last element should be the lists tail")
+        
+        
+    }
+    
 }
