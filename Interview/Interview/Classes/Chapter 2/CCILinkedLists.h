@@ -13,8 +13,14 @@
 
 @interface CCILinkedLists : NSObject
 
+//2.1
 - (void) removeDupes:(LinkedList*)list;
+
+//2.2
 - (Node*) kthLastElement:(NSUInteger)k inList:(LinkedList*)list;
+
+//2.3
+- (void) forwardRemove:(Node*)node;
 
 @end
 

@@ -27,7 +27,6 @@
     return self;
 }
 
-
 - (void) prepend:(id)data {
     //create a new node and associate data
     Node *n = [Node new];

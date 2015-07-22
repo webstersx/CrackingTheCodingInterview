@@ -72,4 +72,38 @@
     return kthLastNode;
 }
 
+/*! 2.3 Implement an algorithm to delete a node in the middle of a singly linked list, given only access to that node.
+ EXAMPLE
+ Input: the node c from the linked list a->b->c->d->e
+ Result: nothing is returned, but the new linked list looks like a- >b- >d->e
+ */
+
+//I think this will have an issue if it requires the removal of only the tail because I can't nil out next to the previous node
+//Another problem, is this doesn't update tail -- if that's needed
+
+- (void) forwardRemove:(Node*)node {
+    
+    //can't forward remove tail, have to update the lists tail
+    NSParameterAssert(node.next);
+    
+    //until we're at the 2nd last item
+    while (node.next.next != nil) {
+        //take the next nodes data and place it in the current node
+        node.data = node.next.data;
+        //move to the next node
+        node = node.next;
+    }
+    
+    //if we're now not at the last element
+    if (node.next) {
+        //copy the data one more time
+        node.data = node.next.data;
+        //nil out next
+        node.next = nil;
+    } else {
+        //well shit.
+    }
+
+}
+
 @end
