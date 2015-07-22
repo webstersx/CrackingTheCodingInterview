@@ -60,19 +60,19 @@ class CCILinkedListsTests: XCTestCase {
         let d = "d"
         let e = "e"
         
-        XCTAssertNil(l.head)
-        XCTAssertNil(l.tail)
+        XCTAssertNil(l.head, "an empty list should not have a head")
+        XCTAssertNil(l.tail, "an empty list should not have a tail")
         
         //add one item
         l.append(a)
-        XCTAssertNotNil(l.head)
-        XCTAssertNotNil(l.tail)
-        XCTAssertEqual(l.head.data as! String, a)
-        XCTAssertEqual(l.head, l.tail)
-        
+        XCTAssertNotNil(l.head, "after appending one item, the list should now have a head")
+        XCTAssertNotNil(l.tail, "after appending one item, the list should now have a tail")
+        XCTAssertEqual(l.head, l.tail, "the head should also be the tail of a list with 1 item")
+        XCTAssertEqual(l.head.data as! String, a, "the data of the appended item should be the value that was appended")
+
         //add another item
         l.append(b)
-        XCTAssertNotEqual(l.head, l.tail)
+        XCTAssertNotEqual(l.head, l.tail, "for a list with two items, the head should not equal the tail")
         
         //add some more
         l.append(c)
@@ -81,17 +81,17 @@ class CCILinkedListsTests: XCTestCase {
         
         //remove the head, it shouldn't be in the list
         l.removeNode(l.head)
-        XCTAssertNotEqual(a, l.head.data as! String)
+        XCTAssertNotEqual(a, l.head.data as! String, "after removing the head of a list, the removed item's data should not be the data at the head of the list")
         
         //remove the tail, it shouldn't be in the list
         l.removeNode(l.tail)
-        XCTAssertNotEqual(e, l.tail.data as! String)
+        XCTAssertNotEqual(e, l.tail.data as! String, "after removing the tail of a list, the removed item's data hsould not be the data at the tail of the list")
         
         //remove the middle node
         let middleNode = l.head.next
-        XCTAssertNotEqual(l.head, middleNode)
-        XCTAssertNotEqual(l.tail, middleNode)
-        XCTAssertEqual(middleNode.next, l.tail)
+        XCTAssertNotEqual(l.head, middleNode, "in a list of more than 2 items, the node next to head should not be the head of the list")
+        XCTAssertNotEqual(l.tail, middleNode, "in a list of more than 2 items, the node next to head should not be the tail of the list")
+        XCTAssertEqual(middleNode.next, l.tail, "in a list of 3 items, the node next to head should have the tail as its next node")
         l.removeNode(middleNode)
         XCTAssertEqual(l.head.next, l.tail)
     }
