@@ -18,4 +18,8 @@
     return self;
 }
 
+- (NSString*) description {
+    return [self.data description];
+}
+
 @end

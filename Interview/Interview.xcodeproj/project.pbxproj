@@ -7,10 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6112E5CE1B7F3A9500758E1D /* CCITreesAndGraphsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6112E5CC1B7F3A9200758E1D /* CCITreesAndGraphsTests.swift */; };
+		6112E5D31B7F7A2600758E1D /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112E5D21B7F7A2600758E1D /* Vertex.m */; };
+		6112E5D61B7F7A7C00758E1D /* UndirectedGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112E5D51B7F7A7C00758E1D /* UndirectedGraph.m */; };
+		6112E5DD1B801F7A00758E1D /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112E5DC1B801F7A00758E1D /* Queue.m */; };
+		6112E5E01B8031DD00758E1D /* CCITreesAndGraphs.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112E5DF1B8031DD00758E1D /* CCITreesAndGraphs.m */; };
+		6112E5E31B81A8C300758E1D /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112E5E21B81A8C300758E1D /* BinaryTree.m */; };
 		611C2DD81B5E6C82000E9B19 /* CCILinkedLists.m in Sources */ = {isa = PBXBuildFile; fileRef = 611C2DD71B5E6C82000E9B19 /* CCILinkedLists.m */; };
 		611C2DDB1B5E6CC4000E9B19 /* CCILinkedListsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611C2DD91B5E6C95000E9B19 /* CCILinkedListsTests.swift */; };
 		611C2DDE1B5E6FD2000E9B19 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 611C2DDD1B5E6FD2000E9B19 /* LinkedList.m */; };
 		611C2DE21B5E6FE9000E9B19 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 611C2DE11B5E6FE9000E9B19 /* Node.m */; };
+		61D0AB0C1B7E80D2009481EE /* PetShelter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D0AB0B1B7E80D2009481EE /* PetShelter.m */; };
+		61D0AB0F1B7E86A3009481EE /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D0AB0E1B7E86A3009481EE /* Pet.m */; };
+		61D0AB151B7E86BC009481EE /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D0AB141B7E86BC009481EE /* Dog.m */; };
+		61D0AB181B7E86C6009481EE /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D0AB171B7E86C6009481EE /* Cat.m */; };
+		61D0AB1C1B7F34A2009481EE /* BinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D0AB1B1B7F34A2009481EE /* BinarySearchTree.m */; };
+		61D0AB1F1B7F34B4009481EE /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D0AB1E1B7F34B4009481EE /* BinaryTreeNode.m */; };
 		61F1A6671B4D4C7000242D95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A6661B4D4C7000242D95 /* main.m */; };
 		61F1A66A1B4D4C7000242D95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A6691B4D4C7000242D95 /* AppDelegate.m */; };
 		61F1A66D1B4D4C7000242D95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A66C1B4D4C7000242D95 /* ViewController.m */; };
@@ -22,6 +34,12 @@
 		61F1A69A1B4D50CB00242D95 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A6991B4D50CB00242D95 /* TestFile.swift */; };
 		61F1A69D1B4D659500242D95 /* CCIArraysAndStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A69C1B4D659500242D95 /* CCIArraysAndStrings.m */; };
 		61F1A6A01B4D65B500242D95 /* CCIArraysAndStringsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F1A69F1B4D65B500242D95 /* CCIArraysAndStringsTests.swift */; };
+		61FAF9E51B7DB91900E0A4FE /* DoublyLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FAF9E41B7DB91900E0A4FE /* DoublyLinkedList.m */; };
+		61FAF9EB1B7DBB0500E0A4FE /* CCIStacksAndQueues.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FAF9EA1B7DBB0500E0A4FE /* CCIStacksAndQueues.m */; };
+		61FAF9ED1B7DBB2300E0A4FE /* CCIStacksAndQueuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FAF9EC1B7DBB2300E0A4FE /* CCIStacksAndQueuesTests.swift */; };
+		61FAF9F11B7DBEA600E0A4FE /* DoublyLinkedNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FAF9F01B7DBEA600E0A4FE /* DoublyLinkedNode.m */; };
+		61FF13E71B7DC42C000A3A5C /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FF13E61B7DC42C000A3A5C /* Stack.m */; };
+		61FF13F01B7DC9A6000A3A5C /* TwoStackQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FF13EF1B7DC9A6000A3A5C /* TwoStackQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +60,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6112E5CC1B7F3A9200758E1D /* CCITreesAndGraphsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCITreesAndGraphsTests.swift; path = "Classes/Chapter 4/CCITreesAndGraphsTests.swift"; sourceTree = "<group>"; };
+		6112E5D11B7F7A2600758E1D /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vertex.h; path = "Classes/Chapter 4/Vertex.h"; sourceTree = "<group>"; };
+		6112E5D21B7F7A2600758E1D /* Vertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Vertex.m; path = "Classes/Chapter 4/Vertex.m"; sourceTree = "<group>"; };
+		6112E5D41B7F7A7C00758E1D /* UndirectedGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UndirectedGraph.h; path = "Classes/Chapter 4/UndirectedGraph.h"; sourceTree = "<group>"; };
+		6112E5D51B7F7A7C00758E1D /* UndirectedGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UndirectedGraph.m; path = "Classes/Chapter 4/UndirectedGraph.m"; sourceTree = "<group>"; };
+		6112E5DB1B801F7A00758E1D /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Queue.h; path = "Classes/Chapter 3/Queue.h"; sourceTree = "<group>"; };
+		6112E5DC1B801F7A00758E1D /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Queue.m; path = "Classes/Chapter 3/Queue.m"; sourceTree = "<group>"; };
+		6112E5DE1B8031DD00758E1D /* CCITreesAndGraphs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCITreesAndGraphs.h; path = "Classes/Chapter 4/CCITreesAndGraphs.h"; sourceTree = "<group>"; };
+		6112E5DF1B8031DD00758E1D /* CCITreesAndGraphs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCITreesAndGraphs.m; path = "Classes/Chapter 4/CCITreesAndGraphs.m"; sourceTree = "<group>"; };
+		6112E5E11B81A8C300758E1D /* BinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryTree.h; path = "Classes/Chapter 4/BinaryTree.h"; sourceTree = "<group>"; };
+		6112E5E21B81A8C300758E1D /* BinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinaryTree.m; path = "Classes/Chapter 4/BinaryTree.m"; sourceTree = "<group>"; };
 		611C2DD61B5E6C82000E9B19 /* CCILinkedLists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCILinkedLists.h; path = "Classes/Chapter 2/CCILinkedLists.h"; sourceTree = "<group>"; };
 		611C2DD71B5E6C82000E9B19 /* CCILinkedLists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCILinkedLists.m; path = "Classes/Chapter 2/CCILinkedLists.m"; sourceTree = "<group>"; };
 		611C2DD91B5E6C95000E9B19 /* CCILinkedListsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCILinkedListsTests.swift; path = "Classes/Chapter 2/CCILinkedListsTests.swift"; sourceTree = "<group>"; };
@@ -49,6 +78,18 @@
 		611C2DDD1B5E6FD2000E9B19 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LinkedList.m; path = "Classes/Chapter 2/LinkedList.m"; sourceTree = "<group>"; };
 		611C2DE01B5E6FE9000E9B19 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Node.h; path = "Classes/Chapter 2/Node.h"; sourceTree = "<group>"; };
 		611C2DE11B5E6FE9000E9B19 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Node.m; path = "Classes/Chapter 2/Node.m"; sourceTree = "<group>"; };
+		61D0AB0A1B7E80D2009481EE /* PetShelter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PetShelter.h; path = "Classes/Chapter 3/PetShelter.h"; sourceTree = "<group>"; };
+		61D0AB0B1B7E80D2009481EE /* PetShelter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PetShelter.m; path = "Classes/Chapter 3/PetShelter.m"; sourceTree = "<group>"; };
+		61D0AB0D1B7E86A3009481EE /* Pet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Pet.h; path = "Classes/Chapter 3/Pet.h"; sourceTree = "<group>"; };
+		61D0AB0E1B7E86A3009481EE /* Pet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Pet.m; path = "Classes/Chapter 3/Pet.m"; sourceTree = "<group>"; };
+		61D0AB131B7E86BC009481EE /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dog.h; path = "Classes/Chapter 3/Dog.h"; sourceTree = "<group>"; };
+		61D0AB141B7E86BC009481EE /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dog.m; path = "Classes/Chapter 3/Dog.m"; sourceTree = "<group>"; };
+		61D0AB161B7E86C6009481EE /* Cat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cat.h; path = "Classes/Chapter 3/Cat.h"; sourceTree = "<group>"; };
+		61D0AB171B7E86C6009481EE /* Cat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Cat.m; path = "Classes/Chapter 3/Cat.m"; sourceTree = "<group>"; };
+		61D0AB1A1B7F34A2009481EE /* BinarySearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinarySearchTree.h; path = "Classes/Chapter 4/BinarySearchTree.h"; sourceTree = "<group>"; };
+		61D0AB1B1B7F34A2009481EE /* BinarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinarySearchTree.m; path = "Classes/Chapter 4/BinarySearchTree.m"; sourceTree = "<group>"; };
+		61D0AB1D1B7F34B4009481EE /* BinaryTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryTreeNode.h; path = "Classes/Chapter 4/BinaryTreeNode.h"; sourceTree = "<group>"; };
+		61D0AB1E1B7F34B4009481EE /* BinaryTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinaryTreeNode.m; path = "Classes/Chapter 4/BinaryTreeNode.m"; sourceTree = "<group>"; };
 		61F1A6621B4D4C7000242D95 /* Interview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F1A6661B4D4C7000242D95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		61F1A6681B4D4C7000242D95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +112,17 @@
 		61F1A69C1B4D659500242D95 /* CCIArraysAndStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCIArraysAndStrings.m; path = "Classes/Chapter 1/CCIArraysAndStrings.m"; sourceTree = "<group>"; };
 		61F1A69E1B4D65B500242D95 /* InterviewTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InterviewTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		61F1A69F1B4D65B500242D95 /* CCIArraysAndStringsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCIArraysAndStringsTests.swift; path = "Classes/Chapter 1/CCIArraysAndStringsTests.swift"; sourceTree = "<group>"; };
+		61FAF9E31B7DB91900E0A4FE /* DoublyLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoublyLinkedList.h; path = "Classes/Chapter 3/DoublyLinkedList.h"; sourceTree = "<group>"; };
+		61FAF9E41B7DB91900E0A4FE /* DoublyLinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoublyLinkedList.m; path = "Classes/Chapter 3/DoublyLinkedList.m"; sourceTree = "<group>"; };
+		61FAF9E91B7DBB0500E0A4FE /* CCIStacksAndQueues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCIStacksAndQueues.h; path = "Classes/Chapter 3/CCIStacksAndQueues.h"; sourceTree = "<group>"; };
+		61FAF9EA1B7DBB0500E0A4FE /* CCIStacksAndQueues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCIStacksAndQueues.m; path = "Classes/Chapter 3/CCIStacksAndQueues.m"; sourceTree = "<group>"; };
+		61FAF9EC1B7DBB2300E0A4FE /* CCIStacksAndQueuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CCIStacksAndQueuesTests.swift; path = "Classes/Chapter 3/CCIStacksAndQueuesTests.swift"; sourceTree = "<group>"; };
+		61FAF9EF1B7DBEA600E0A4FE /* DoublyLinkedNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoublyLinkedNode.h; path = "Classes/Chapter 3/DoublyLinkedNode.h"; sourceTree = "<group>"; };
+		61FAF9F01B7DBEA600E0A4FE /* DoublyLinkedNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoublyLinkedNode.m; path = "Classes/Chapter 3/DoublyLinkedNode.m"; sourceTree = "<group>"; };
+		61FF13E51B7DC42C000A3A5C /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stack.h; path = "Classes/Chapter 3/Stack.h"; sourceTree = "<group>"; };
+		61FF13E61B7DC42C000A3A5C /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Stack.m; path = "Classes/Chapter 3/Stack.m"; sourceTree = "<group>"; };
+		61FF13EE1B7DC9A6000A3A5C /* TwoStackQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwoStackQueue.h; path = "Classes/Chapter 3/TwoStackQueue.h"; sourceTree = "<group>"; };
+		61FF13EF1B7DC9A6000A3A5C /* TwoStackQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwoStackQueue.m; path = "Classes/Chapter 3/TwoStackQueue.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,13 +150,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6112E5CF1B7F716100758E1D /* Binary Trees */ = {
+			isa = PBXGroup;
+			children = (
+				6112E5E41B81A8C900758E1D /* Binary Tree */,
+				6112E5E51B81A8D200758E1D /* Binary Search Tree */,
+				61D0AB1D1B7F34B4009481EE /* BinaryTreeNode.h */,
+				61D0AB1E1B7F34B4009481EE /* BinaryTreeNode.m */,
+			);
+			name = "Binary Trees";
+			sourceTree = "<group>";
+		};
+		6112E5D01B7F716900758E1D /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				6112E5D11B7F7A2600758E1D /* Vertex.h */,
+				6112E5D21B7F7A2600758E1D /* Vertex.m */,
+				6112E5D41B7F7A7C00758E1D /* UndirectedGraph.h */,
+				6112E5D51B7F7A7C00758E1D /* UndirectedGraph.m */,
+			);
+			name = Graph;
+			sourceTree = "<group>";
+		};
+		6112E5D71B801F4E00758E1D /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				6112E5DB1B801F7A00758E1D /* Queue.h */,
+				6112E5DC1B801F7A00758E1D /* Queue.m */,
+			);
+			name = Queue;
+			sourceTree = "<group>";
+		};
+		6112E5E41B81A8C900758E1D /* Binary Tree */ = {
+			isa = PBXGroup;
+			children = (
+				6112E5E11B81A8C300758E1D /* BinaryTree.h */,
+				6112E5E21B81A8C300758E1D /* BinaryTree.m */,
+			);
+			name = "Binary Tree";
+			sourceTree = "<group>";
+		};
+		6112E5E51B81A8D200758E1D /* Binary Search Tree */ = {
+			isa = PBXGroup;
+			children = (
+				61D0AB1A1B7F34A2009481EE /* BinarySearchTree.h */,
+				61D0AB1B1B7F34A2009481EE /* BinarySearchTree.m */,
+			);
+			name = "Binary Search Tree";
+			sourceTree = "<group>";
+		};
 		611C2DD51B5E6C5F000E9B19 /* Chapter 2: Linked Lists */ = {
 			isa = PBXGroup;
 			children = (
 				611C2DD61B5E6C82000E9B19 /* CCILinkedLists.h */,
 				611C2DD71B5E6C82000E9B19 /* CCILinkedLists.m */,
 				611C2DD91B5E6C95000E9B19 /* CCILinkedListsTests.swift */,
-				611C2DDF1B5E6FDA000E9B19 /* Data Structures */,
 			);
 			name = "Chapter 2: Linked Lists";
 			sourceTree = "<group>";
@@ -112,12 +212,37 @@
 		611C2DDF1B5E6FDA000E9B19 /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
-				611C2DDC1B5E6FD2000E9B19 /* LinkedList.h */,
-				611C2DDD1B5E6FD2000E9B19 /* LinkedList.m */,
-				611C2DE01B5E6FE9000E9B19 /* Node.h */,
-				611C2DE11B5E6FE9000E9B19 /* Node.m */,
+				6112E5D01B7F716900758E1D /* Graph */,
+				6112E5CF1B7F716100758E1D /* Binary Trees */,
+				61FAF9E71B7DB92A00E0A4FE /* Linked Lists */,
+				61FF13E81B7DC432000A3A5C /* Stacks and Queues */,
 			);
 			name = "Data Structures";
+			sourceTree = "<group>";
+		};
+		61D0AB091B7E80AD009481EE /* Pet Shelter */ = {
+			isa = PBXGroup;
+			children = (
+				61D0AB0A1B7E80D2009481EE /* PetShelter.h */,
+				61D0AB0B1B7E80D2009481EE /* PetShelter.m */,
+				61D0AB0D1B7E86A3009481EE /* Pet.h */,
+				61D0AB0E1B7E86A3009481EE /* Pet.m */,
+				61D0AB131B7E86BC009481EE /* Dog.h */,
+				61D0AB141B7E86BC009481EE /* Dog.m */,
+				61D0AB161B7E86C6009481EE /* Cat.h */,
+				61D0AB171B7E86C6009481EE /* Cat.m */,
+			);
+			name = "Pet Shelter";
+			sourceTree = "<group>";
+		};
+		61D0AB191B7F3478009481EE /* Chapter 4: Trees and Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				6112E5DE1B8031DD00758E1D /* CCITreesAndGraphs.h */,
+				6112E5DF1B8031DD00758E1D /* CCITreesAndGraphs.m */,
+				6112E5CC1B7F3A9200758E1D /* CCITreesAndGraphsTests.swift */,
+			);
+			name = "Chapter 4: Trees and Graphs";
 			sourceTree = "<group>";
 		};
 		61F1A6591B4D4C7000242D95 = {
@@ -199,10 +324,107 @@
 		61F1A6A21B4D66F200242D95 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				611C2DDF1B5E6FDA000E9B19 /* Data Structures */,
 				61F1A6A11B4D66E700242D95 /* Chapter 1: Arrays and Strings */,
 				611C2DD51B5E6C5F000E9B19 /* Chapter 2: Linked Lists */,
+				61FAF9E81B7DBAEA00E0A4FE /* Chapter 3: Stacks and Queues */,
+				61D0AB191B7F3478009481EE /* Chapter 4: Trees and Graphs */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		61FAF9E61B7DB92000E0A4FE /* Doubly Linked List */ = {
+			isa = PBXGroup;
+			children = (
+				61FAF9E31B7DB91900E0A4FE /* DoublyLinkedList.h */,
+				61FAF9E41B7DB91900E0A4FE /* DoublyLinkedList.m */,
+			);
+			name = "Doubly Linked List";
+			sourceTree = "<group>";
+		};
+		61FAF9E71B7DB92A00E0A4FE /* Linked Lists */ = {
+			isa = PBXGroup;
+			children = (
+				61FF13E91B7DC45D000A3A5C /* Nodes */,
+				61FF13EC1B7DC48B000A3A5C /* Singly Linked List */,
+				61FAF9E61B7DB92000E0A4FE /* Doubly Linked List */,
+			);
+			name = "Linked Lists";
+			sourceTree = "<group>";
+		};
+		61FAF9E81B7DBAEA00E0A4FE /* Chapter 3: Stacks and Queues */ = {
+			isa = PBXGroup;
+			children = (
+				61D0AB091B7E80AD009481EE /* Pet Shelter */,
+				61FAF9E91B7DBB0500E0A4FE /* CCIStacksAndQueues.h */,
+				61FAF9EA1B7DBB0500E0A4FE /* CCIStacksAndQueues.m */,
+				61FAF9EC1B7DBB2300E0A4FE /* CCIStacksAndQueuesTests.swift */,
+			);
+			name = "Chapter 3: Stacks and Queues";
+			sourceTree = "<group>";
+		};
+		61FF13E81B7DC432000A3A5C /* Stacks and Queues */ = {
+			isa = PBXGroup;
+			children = (
+				6112E5D71B801F4E00758E1D /* Queue */,
+				61FF13ED1B7DC4AF000A3A5C /* Stack */,
+				61FF13F11B7DC9A9000A3A5C /* Two-Stack Queue */,
+			);
+			name = "Stacks and Queues";
+			sourceTree = "<group>";
+		};
+		61FF13E91B7DC45D000A3A5C /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				61FF13EA1B7DC47B000A3A5C /* Singly Linked Node */,
+				61FF13EB1B7DC482000A3A5C /* Doubly Linked Node */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		61FF13EA1B7DC47B000A3A5C /* Singly Linked Node */ = {
+			isa = PBXGroup;
+			children = (
+				611C2DE01B5E6FE9000E9B19 /* Node.h */,
+				611C2DE11B5E6FE9000E9B19 /* Node.m */,
+			);
+			name = "Singly Linked Node";
+			sourceTree = "<group>";
+		};
+		61FF13EB1B7DC482000A3A5C /* Doubly Linked Node */ = {
+			isa = PBXGroup;
+			children = (
+				61FAF9EF1B7DBEA600E0A4FE /* DoublyLinkedNode.h */,
+				61FAF9F01B7DBEA600E0A4FE /* DoublyLinkedNode.m */,
+			);
+			name = "Doubly Linked Node";
+			sourceTree = "<group>";
+		};
+		61FF13EC1B7DC48B000A3A5C /* Singly Linked List */ = {
+			isa = PBXGroup;
+			children = (
+				611C2DDC1B5E6FD2000E9B19 /* LinkedList.h */,
+				611C2DDD1B5E6FD2000E9B19 /* LinkedList.m */,
+			);
+			name = "Singly Linked List";
+			sourceTree = "<group>";
+		};
+		61FF13ED1B7DC4AF000A3A5C /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				61FF13E51B7DC42C000A3A5C /* Stack.h */,
+				61FF13E61B7DC42C000A3A5C /* Stack.m */,
+			);
+			name = Stack;
+			sourceTree = "<group>";
+		};
+		61FF13F11B7DC9A9000A3A5C /* Two-Stack Queue */ = {
+			isa = PBXGroup;
+			children = (
+				61FF13EE1B7DC9A6000A3A5C /* TwoStackQueue.h */,
+				61FF13EF1B7DC9A6000A3A5C /* TwoStackQueue.m */,
+			);
+			name = "Two-Stack Queue";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,14 +558,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6112E5D61B7F7A7C00758E1D /* UndirectedGraph.m in Sources */,
+				61FF13E71B7DC42C000A3A5C /* Stack.m in Sources */,
+				61FF13F01B7DC9A6000A3A5C /* TwoStackQueue.m in Sources */,
 				61F1A66D1B4D4C7000242D95 /* ViewController.m in Sources */,
+				6112E5E31B81A8C300758E1D /* BinaryTree.m in Sources */,
 				611C2DDE1B5E6FD2000E9B19 /* LinkedList.m in Sources */,
+				6112E5DD1B801F7A00758E1D /* Queue.m in Sources */,
+				61D0AB1F1B7F34B4009481EE /* BinaryTreeNode.m in Sources */,
 				61F1A69D1B4D659500242D95 /* CCIArraysAndStrings.m in Sources */,
 				61F1A66A1B4D4C7000242D95 /* AppDelegate.m in Sources */,
+				61D0AB181B7E86C6009481EE /* Cat.m in Sources */,
 				61F1A6671B4D4C7000242D95 /* main.m in Sources */,
 				611C2DD81B5E6C82000E9B19 /* CCILinkedLists.m in Sources */,
 				61F1A69A1B4D50CB00242D95 /* TestFile.swift in Sources */,
+				61D0AB1C1B7F34A2009481EE /* BinarySearchTree.m in Sources */,
+				61D0AB0F1B7E86A3009481EE /* Pet.m in Sources */,
+				6112E5E01B8031DD00758E1D /* CCITreesAndGraphs.m in Sources */,
+				61D0AB151B7E86BC009481EE /* Dog.m in Sources */,
+				61FAF9E51B7DB91900E0A4FE /* DoublyLinkedList.m in Sources */,
+				61FAF9F11B7DBEA600E0A4FE /* DoublyLinkedNode.m in Sources */,
+				61FAF9EB1B7DBB0500E0A4FE /* CCIStacksAndQueues.m in Sources */,
+				6112E5D31B7F7A2600758E1D /* Vertex.m in Sources */,
 				611C2DE21B5E6FE9000E9B19 /* Node.m in Sources */,
+				61D0AB0C1B7E80D2009481EE /* PetShelter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +591,8 @@
 			files = (
 				61F1A6A01B4D65B500242D95 /* CCIArraysAndStringsTests.swift in Sources */,
 				61F1A6801B4D4C7000242D95 /* InterviewTests.m in Sources */,
+				61FAF9ED1B7DBB2300E0A4FE /* CCIStacksAndQueuesTests.swift in Sources */,
+				6112E5CE1B7F3A9500758E1D /* CCITreesAndGraphsTests.swift in Sources */,
 				611C2DDB1B5E6CC4000E9B19 /* CCILinkedListsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

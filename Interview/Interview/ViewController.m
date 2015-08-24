@@ -18,8 +18,7 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)test_matrixRotation {
     // Do any additional setup after loading the view, typically from a nib.
     
     TestClass *instance = [TestClass new];
@@ -54,7 +53,10 @@
         free(matrix[i]);
     }
     free(matrix);
-    
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,3 +9,21 @@
 #import "CCILinkedLists.h"
 #import "LinkedList.h"
 #import "Node.h"
+
+//Chapter 3
+#import "CCIStacksAndQueues.h"
+#import "DoublyLinkedList.h"
+#import "DoublyLinkedNode.h"
+#import "Stack.h"
+#import "TwoStackQueue.h"
+#import "PetShelter.h"
+#import "Pet.h"
+#import "Cat.h"
+#import "Dog.h"
+
+//Chapter 4
+#import "CCITreesAndGraphs.h"
+#import "BinarySearchTree.h"
+#import "BinaryTreeNode.h"
+#import "UndirectedGraph.h"
+#import "Vertex.h"

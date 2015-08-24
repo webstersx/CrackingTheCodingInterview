@@ -22,6 +22,15 @@
 //2.3
 - (void) forwardRemove:(Node*)node;
 
+//2.4
+- (void) partitionList:(LinkedList*)list aroundValue:(id)value;
+
+//2.5
+- (NSInteger) sumOfList:(LinkedList*)list1 andList:(LinkedList*)list2;
+
+//2.7
+- (BOOL) isPalindrome:(LinkedList*)list;
+
 @end
 
 

@@ -27,40 +27,55 @@
     return self;
 }
 
+- (void) append:(id)data {
+    Node *n = [Node new];
+    n.data = data;
+    
+    [self appendNode:n];
+}
+
 - (void) prepend:(id)data {
     //create a new node and associate data
     Node *n = [Node new];
     n.data = data;
     
-    //attempt to point to next as current head if it exists
-    n.next = self.head;
+    [self prependNode:n];
+}
+
+- (void) appendNode:(Node *)node {
     
-    //head is now the new node
-    self.head = n;
+    //point tail to this node
+    self.tail.next = node;
+    //repoint tail to this
+    self.tail = node;
     
-    //if this is the only node, it's also tail
-    if (self.head.next) {
-        self.tail = n;
+    //if this is the only node, it's also head
+    if (!self.head) {
+        self.head = node;
     }
     
     self.length++;
 }
 
-- (void) append:(id)data {
-    Node *n = [Node new];
-    n.data = data;
+- (void) prependNode:(Node *)node {
+    //attempt to point to next as current head if it exists
+    node.next = self.head;
     
-    //point tail to this node
-    self.tail.next = n;
-    //repoint tail to this
-    self.tail = n;
+    //head is now the new node
+    self.head = node;
     
-    //if this is the only node, it's also head
-    if (!self.head) {
-        self.head = n;
+    //if this is the only node, it's also tail
+    if (!self.head.next) {
+        self.tail = node;
     }
     
     self.length++;
+}
+
+//TODO: fix length
+- (void) updateHeadNode:(Node *)newHead tailNode:(Node *)newTail {
+    self.head = newHead;
+    self.tail = newTail;
 }
 
 - (void) removeNode:(Node*)node {
@@ -114,6 +129,19 @@
         
         self.length --;
     }
+}
+
+- (NSString*) description {
+    NSMutableString *string = [NSMutableString string];
+    
+    Node *n = self.head;
+    
+    while (n) {
+        [string appendFormat:@"%@ -> %@", n, n.next ? @"" : @"null"];
+        n = n.next;
+    }
+    
+    return string.copy;
 }
 
 @end

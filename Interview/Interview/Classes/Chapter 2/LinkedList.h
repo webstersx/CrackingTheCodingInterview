@@ -21,8 +21,11 @@
 - (void) append:(id)data;
 
 //adding nodes
-//- (void) prependNode:(Node*)node;
-//- (void) appendNode:(Node*)node;
+- (void) prependNode:(Node*)node;
+- (void) appendNode:(Node*)node;
+
+/*! Dangerously points the given node to head without making any extra modifications to the list */
+- (void) updateHeadNode:(Node*)newHead tailNode:(Node*)newTail;
 
 //removing data/nodes
 //- (void) remove:(id)data; //O(n), remove all nodes with this data

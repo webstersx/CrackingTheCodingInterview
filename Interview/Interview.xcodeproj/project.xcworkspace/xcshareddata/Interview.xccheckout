@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4E82B587-7ACC-46B8-8778-43181EEB2CB6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Interview</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>915189F5CED1F42B4E6AAB1A8289C5634C4E3C60</key>
+		<string>https://github.com/webstersx/CrackingTheCodingInterview.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Interview/Interview.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>915189F5CED1F42B4E6AAB1A8289C5634C4E3C60</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/webstersx/CrackingTheCodingInterview.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>915189F5CED1F42B4E6AAB1A8289C5634C4E3C60</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>915189F5CED1F42B4E6AAB1A8289C5634C4E3C60</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CrackingTheCodingInterview</string>
+		</dict>
+	</array>
+</dict>
+</plist>

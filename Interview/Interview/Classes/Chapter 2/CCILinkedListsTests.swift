@@ -148,10 +148,136 @@ class CCILinkedListsTests: XCTestCase {
         //remember that h will stay the same, its the data that changes
         let h = l.head
         let hn = h.next
+        let hnv = hn.data
         ll.forwardRemove(h)
-        //... to be continued
+
+        //test removing head
+        XCTAssertNotEqual(h.data as! String, a, "the value of the node to remove, should no longer be the head")
+        XCTAssertEqual(h.data as! String, hnv as! String, "the value next to head should be at head once removing the value previous stored at head")
+        
+        //test removing an intermediate node
+        
+        //test removing tail? this can't really be done effectively
         
 
+    }
+    
+    //needs to be tested; I don't like how it messes up the relative ordering of the items
+    func test_2_4() {
+        l.append(4)
+        l.append(1)
+        l.append(2)
+        l.append(8)
+        l.append(6)
+        l.append(5)
+        l.append(2)
+        l.append(3)
+        l.append(4)
+        l.append(1)
+        l.append(2)
+        l.append(8)
+        
+        ll.partitionList(l, aroundValue: 27)
+    }
+    
+    
+    func test_2_5() {
+        
+        //nothing
+        var l1 = LinkedList()
+        var l2 = LinkedList()
+        
+        XCTAssertEqual(ll.sumOfList(l1, andList: l2), 0, "nothing + nothing = 0")
+        
+        //one value
+        l1 = LinkedList()
+        l2 = LinkedList()
+        
+        l1.append(1)
+        
+        XCTAssertEqual(ll.sumOfList(l1, andList: l2), l1.head.data as! NSInteger, "something + nothing = something")
+        
+        //Symmetric numbers
+        l1 = LinkedList()
+        l2 = LinkedList()
+        
+        l1.append(5)
+        l1.append(8)
+        l1.append(9)
+        //represented 985
+        
+        l2.append(7)
+        l2.append(7)
+        l2.append(7)
+        
+        XCTAssertEqual(ll.sumOfList(l1, andList: l2), 1762, "777 + 985 = 1762")
+        
+        //Assymetric numbers
+        l1 = LinkedList()
+        l2 = LinkedList()
+        
+        l1.append(5)
+        l1.append(8)
+        //represented 85
+        
+        l2.append(5)
+        XCTAssertEqual(ll.sumOfList(l1, andList: l2), 90, "85 + 5 = 90")
+        
+    }
+    
+    //todo: test_2_6
+    
+    
+    
+    func test_2_7() {
+        
+        //7 (odd) elements; not a palindrome
+        l.append(1)
+        l.append(1)
+        l.append(1)
+        l.append(1)
+        l.append(1)
+        l.append(1)
+        l.append(2)
+        XCTAssertFalse(ll.isPalindrome(l), "1 1 1 1 1 1 2 is not a palindrome")
+        
+        //6 (even) elements; a palindrome
+        l.removeNode(l.tail)
+        XCTAssertTrue(ll.isPalindrome(l), "1 1 1 1 1 1 is a palindrome")
+        
+        //6 (even) elements; not a palindrome
+        l.removeNode(l.head)
+        l.append(2)
+        XCTAssertFalse(ll.isPalindrome(l), "1 1 1 1 1 2 is not palindrome")
+        
+        //5 (odd) elements; is a palindrome
+        l.removeNode(l.head)
+        l.removeNode(l.head)
+        l.prepend(2)
+        XCTAssertTrue(ll.isPalindrome(l), "2 1 1 1 2 is a palindrome")
+        
+        l.removeNode(l.head)
+        l.removeNode(l.head)
+        XCTAssertFalse(ll.isPalindrome(l), "1 1 2 is not a palindrome")
+        
+        l.removeNode(l.head)
+        l.prepend(2)
+        XCTAssertTrue(ll.isPalindrome(l), "2 1 2 is a palindrome")
+        
+        
+        l.removeNode(l.head)
+        XCTAssertFalse(ll.isPalindrome(l), "1 2 is not a palindrome")
+        
+        l.removeNode(l.head)
+        l.prepend(2)
+        XCTAssertTrue(ll.isPalindrome(l), "2 2 is a palindrome")
+        
+        l.removeNode(l.head)
+        XCTAssertTrue(ll.isPalindrome(l), "2 is a palindrome")
+        
+        l.removeNode(l.head)
+        XCTAssertTrue(ll.isPalindrome(l), "an empty list is a palindrome -- kind of")
+        
     }
     
 }
